@@ -1,3 +1,4 @@
+import os
 import time
 
 from selenium import webdriver
@@ -7,12 +8,16 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+
 path = 'venv/Scripts/chromedriver.exe'
-google_email = ''
-google_password = ''
+timeout = 15
+
+google_email = os.environ.get('USR')
+google_password = os.environ.get('PWD')
+
 driver = webdriver.Chrome(path)
 action = ActionChains(driver)
-timeout = 15
+
 wait = WebDriverWait(driver, timeout)
 visible = EC.visibility_of_element_located
 
@@ -74,3 +79,4 @@ def pre_navigation():
 
 
 pre_navigation()
+login_gmail()

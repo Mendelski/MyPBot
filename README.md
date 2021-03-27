@@ -5,6 +5,7 @@
 * Create a virtual environment for the dependencies
 * Run ``requirements.txt`` inside your env
 * Download browser driver
+* Setup environment variables
 
 ___
 
@@ -39,6 +40,11 @@ _This is will handle the browser for us_
 
 * Put the file into this folder  
     >Windows:  `` venv\Scripts\ ``  
-    Linux:  `` venv/bin/ `` 
-                                                                                             
+    Linux:  `` venv/bin/ ``  
+
+### Four Step, Setup Environment.
+* Setup 
+    > List of variables:  
+    USR: "user@gmai.com"  
+    PWD: "yourPassword"                                                
     
