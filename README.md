@@ -36,5 +36,9 @@ _This is will handle the browser for us_
 * Search on Google the webdriver compatible with you personal browser, then download then 
     > On my case chromedriver 89, https://chromedriver.chromium.org/downloads  
     Drivers available: ChromeDriver, GeckoDriver, MS Edge WebDriver. 
+
+* Put the file into this folder  
+    >Windows:  `` venv\Scripts\ ``  
+    Linux:  `` venv/bin/ `` 
                                                                                              
     
