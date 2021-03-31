@@ -8,7 +8,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-
 path = 'venv/Scripts/chromedriver.exe'
 timeout = 15
 
@@ -28,7 +27,9 @@ def open_page(url, size=None):
 
     driver.get(url)
     time.sleep(1)
+
     driver.set_window_size(size[0], size[1])
+
     print("Page Ok!")
     return driver
 
@@ -48,21 +49,12 @@ def click_on_first_video():
     print("Click Ok!")
 
 
-def login_gmail():
-    # link when logged https://mail.google.com/mail/u/0/#inbox
-
-    driver.get('https://gmail.com/')
-    login_field = driver.find_element_by_name('identifier')
-    login_field.send_keys(google_email)
-    login_field.send_keys(Keys.ENTER)
-
-
-def pre_navigation():
+def find_youtube_video(title):
     try:
         open_page('https://www.youtube.com/')
         time.sleep(0.5)
 
-        find_video_on_youtube("Best eletronic music")
+        find_video_on_youtube(title)
         driver.refresh()
         time.sleep(1.5)
 
@@ -72,11 +64,13 @@ def pre_navigation():
 
     except Exception as e:
         driver.__exit__()
+
         print(f"Bot closes unexpectedly\nError: {e}")
         return
+
+
 # In a highly scalable scenario, it is very necessary to ensure that all processes are completed and leave no trace.
 # In some cases it may be necessary to save the PID to kill the process at the end of the run.
 
-
-pre_navigation()
-login_gmail()
+find_youtube_video("Best music")
+find_youtube_video("")
