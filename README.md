@@ -45,6 +45,6 @@ _This is will handle the browser for us_
 ### Four Step, Setup Environment.
 * Setup 
     > List of variables:  
-    USR: "user@gmai.com"  
+    USR: "user@gmail.com"  
     PWD: "yourPassword"                                                
     
